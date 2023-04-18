@@ -1,6 +1,6 @@
 # full_stack_news
 
-## A personal coding challenge, this is a simple blog web application. Tech stack: React, Redux, Express.js and MySQL. Demo link is at: https://grand-nasturtium-b81bfe.netlify.app/. The code for back-end server is at: [!here](https://github.com/lamngue/full_stack_news_server)
+## A personal coding challenge, this is a simple blog web application. Tech stack: React, Redux, Express.js and MySQL. Demo link is at: https://grand-nasturtium-b81bfe.netlify.app/. The code for back-end server is at [here](https://github.com/lamngue/full_stack_news_server)
 
 ### The ERD of the app, here, a news can have many categories, and a category can contains many news, hence this is a many-to-many relationship:
 ![full_stack_news drawio](https://user-images.githubusercontent.com/34784901/232712808-9c9ee39f-baca-4d14-a904-58a69d53d503.png)
