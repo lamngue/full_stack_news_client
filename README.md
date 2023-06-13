@@ -1,10 +1,9 @@
 # full_stack_news
 
-## A Coding challenge for a company, this is a simple blog web application. Tech stack: React, Redux, Express.js and MySQL. Demo link is at: https://grand-nasturtium-b81bfe.netlify.app/
+## A personal coding challenge, this is a simple blog web application. Tech stack: React, Redux, Express.js and MySQL. Demo link is at: https://peaceful-arithmetic-6cc738.netlify.app/. The code for back-end server is at [here](https://github.com/lamngue/full_stack_news_server).
 
-### A news can have many categories, and a category can contains many news, hence this is a many-to-many relationship
-
-![image](https://user-images.githubusercontent.com/34784901/165018972-7a03c97d-a1ac-4c3e-92d4-a0e3f7c0dcdf.png)
+### The ERD of the app, here, a news can have many categories, and a category can contains many news, hence this is a many-to-many relationship:
+![full_stack_news drawio](https://user-images.githubusercontent.com/34784901/232712808-9c9ee39f-baca-4d14-a904-58a69d53d503.png)
 
 ### To run and test on local, the .env file is at the backend folder
 
