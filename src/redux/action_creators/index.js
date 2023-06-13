@@ -3,7 +3,7 @@ import Cookies from "js-cookie";
 
 const getAxiosInstance = () => {
   return axios.create({
-    baseURL: "https://full-stack-news-backend.herokuapp.com/",
+    baseURL: "http://localhost:3001",
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",

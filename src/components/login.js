@@ -17,16 +17,22 @@ const Login = () => {
     useEffect(() => {
         if (user && user.data) {
             if (user.data === "Wrong password!") {
-                notification.open({
-                    message: 'Wrong password',
-                    description:
-                      'Please try again',
-                  });
+                notifyErrorMessage('Wrong password')
             } else if (user.data.user) {
                 navigate("/main/all-post");
+            } else if (user.data === 'Wrong username or password!') {
+                notifyErrorMessage('Wrong username or password')
             }
         }
     }, [user]);
+
+    const notifyErrorMessage = (message) => {
+        notification.open({
+            message: message,
+            description:
+              'Please try again',
+          });
+    }
 
     const onFinishFailed = (errorInfo) => {
         console.log("Failed:", errorInfo);

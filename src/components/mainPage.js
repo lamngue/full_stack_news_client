@@ -1,11 +1,11 @@
-import { useEffect, useState, Suspense } from "react";
+import { useEffect, useState } from "react";
 import "../App.css";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { BrowserRouter as Link } from "react-router-dom";
 import { useNavigate } from "react-router";
-import { Layout, Menu, Button } from "antd";
+import { Layout, Menu } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import { Outlet } from "react-router";
-import { fetchCategories, logoutUser } from "../redux/action_creators";
+import { fetchCategories } from "../redux/action_creators";
 import useWindowSize from "../utils/useWindowSize";
 
 import { PlusSquareOutlined, ReadOutlined } from "@ant-design/icons";

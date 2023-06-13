@@ -1,4 +1,3 @@
-import {useEffect} from "react";
 import { Link } from "react-router-dom";
 import { Button, Card, Popconfirm, Space, message } from "antd";
 import { deleteNews } from "../redux/action_creators";

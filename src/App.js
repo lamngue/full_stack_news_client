@@ -4,8 +4,8 @@ import { BrowserRouter as Router, Link } from "react-router-dom";
 import { useRoutes } from "react-router-dom";
 import { Layout } from "antd";
 import LoadingBar from "./components/loadingBar";
-import { useDispatch, useSelector } from "react-redux";
-const { Header, Content, Footer, Sider } = Layout;
+import { useSelector } from "react-redux";
+const { Content } = Layout;
 
 const AllPostModule = lazy(() => import("./components/allPosts"));
 const ViewAPostModule = lazy(() => import("./components/viewAPost"));
