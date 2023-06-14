@@ -21,7 +21,7 @@ const MainPage = () => {
   const navigate = useNavigate();
 
   const user = useSelector((state) => state.user);
-
+ 
   useEffect(() => {
     if (user && Object.keys(user).length === 0) {
       navigate("/");
@@ -35,6 +35,7 @@ const MainPage = () => {
   const onClick = (e) => {
     setCurrent(e.key);
   };
+
 
   return (
     <Layout

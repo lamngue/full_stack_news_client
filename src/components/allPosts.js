@@ -1,5 +1,5 @@
 import { React, useEffect } from "react";
-import { useParams } from "react-router";
+import { useParams, useLocation } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
 import { Pagination, Button } from "antd";
 import NewsCard from "./newsCard";
@@ -10,6 +10,7 @@ const AllPosts = () => {
   const user = useSelector((state) => state.user);
   const { type } = useParams();
   const dispatch = useDispatch();
+  const location = useLocation();
 
   useEffect(() => {
     dispatch(clearNews);
@@ -24,10 +25,35 @@ const AllPosts = () => {
     dispatch(fetchNews(type, pageSize, page));
   };
 
+  const setTitle = () => {
+    const category = location.pathname.split('/').slice(-1)[0]
+    let title = "";
+    switch (category) {
+      case 'sports':
+        title = 'Sports news'
+        break;
+      case 'business':
+        title = 'Business news'
+        break;
+      case 'politics':
+        title = 'Politics news'
+        break;
+      case 'entertainment':
+        title = 'Entertainment news'
+        break;
+      case 'tech':
+        title = 'Technology news'
+        break;
+      default:
+        title = 'All news'
+    }
+    return title;
+  }
+
   return (
     <div>
       <div className="container">
-      <h2>All News</h2>
+      <h2>{setTitle()}</h2>
         <Button
           style={{ marginLeft: "auto" }}
                   onClick={logOut}
