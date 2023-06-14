@@ -1,4 +1,5 @@
-import { Form, Input, Button, Checkbox, message } from "antd";
+import { Form, Input, Button, Checkbox, message, Space } from "antd";
+import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { saveUser } from "../redux/action_creators";
 import { useNavigate } from "react-router";
@@ -99,9 +100,15 @@ const Register = () => {
           span: 16,
         }}
       >
+      <Space>
         <Button type="primary" htmlType="submit">
           Register
         </Button>
+        <Button type="primary" htmlType="submit">
+          <Link to="/">Login</Link>
+        </Button>
+      </Space>
+
       </Form.Item>
     </Form>
   );
