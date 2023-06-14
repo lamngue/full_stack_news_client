@@ -35,6 +35,7 @@ const CreateNews = (props) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+
   useEffect(() => {
     if (id) {
       dispatch(fetchNewsDetail(id));
@@ -55,10 +56,12 @@ const CreateNews = (props) => {
 
   const onFinish = async (values) => {
     values.content = content;
-    values.userID = user.data.id;
+    values.userID = user.data.user.ID;
     if (isEdit) {
       dispatch(editNews({ id, values }));
-      message.success("Update completed!");
+      message.success("Update completed! Navigating to main page.").then(() => {
+        navigate("/main/all-post");
+      });
     } else {
       dispatch(addNews(values));
       navigate("/main/all-post");

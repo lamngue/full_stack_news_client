@@ -20,10 +20,6 @@ const AllPosts = () => {
     dispatch(logoutUser());
   };
 
-  useEffect(() => {
-    console.log(news);
-  })
-
   const handleChangePage = (page, pageSize) => {
     dispatch(fetchNews(type, pageSize, page));
   };

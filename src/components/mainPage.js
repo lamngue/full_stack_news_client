@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "../App.css";
-import { BrowserRouter as Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router";
 import { Layout, Menu } from "antd";
 import { useDispatch, useSelector } from "react-redux";

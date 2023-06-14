@@ -1,6 +1,5 @@
 import React, { lazy, Suspense, useEffect } from "react";
 import "./App.css";
-import { BrowserRouter as Router, Link } from "react-router-dom";
 import { useRoutes } from "react-router-dom";
 import { Layout } from "antd";
 import LoadingBar from "./components/loadingBar";
@@ -42,8 +41,7 @@ function App() {
 
   return (
     <div className="App">
-      <Router>
-        <Layout className="site-layout">
+      <Layout className="site-layout">
           <Content
             style={{
               margin: "0 16px",
@@ -72,7 +70,6 @@ function App() {
             </div>
           </Content>
         </Layout>
-      </Router>
     </div>
   );
 }

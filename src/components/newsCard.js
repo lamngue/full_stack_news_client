@@ -38,10 +38,10 @@ const NewsCard = (props) => {
           </Button>
 
           <Button
-            disabled={user && user.data?.id  !== props.userID}
+            disabled={user && user.data?.user.ID  !== props.userID}
             icon={width <= 700 ? <EditOutlined /> : null}
           >
-            <Link to={`/edit/${props.ID}`}>{width > 700 ? "Edit" : null}</Link>
+            <Link to={`/main/edit/${props.ID}`}>{width > 700 ? "Edit" : null}</Link>
           </Button>
           <Popconfirm
             title="Are you sure to delete this news?"
@@ -49,7 +49,7 @@ const NewsCard = (props) => {
             onCancel={cancel}
           >
             <Button
-              disabled={user && user.data?.id !== props.userID}
+              disabled={user && user.data?.user.ID !== props.userID}
               danger
               icon={width <= 700 ? <DeleteOutlined /> : null}
             >
